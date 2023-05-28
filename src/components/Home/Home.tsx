@@ -15,7 +15,7 @@ const Home: FC = () => {
 	const [status, setStatus] = useState(-1)
 
 	useEffect(() => {
-		chrome.tabs.query({ active: true, url: ['https://chat-shared1.zhile.io/*'] }).then(([tab]) => {
+		chrome.tabs.query({ active: true, url: ['https://chat-shared2.zhile.io/*'] }).then(([tab]) => {
 			setStatus(tab ? 1 : 0)
 		})
 	}, [])
@@ -27,7 +27,7 @@ const Home: FC = () => {
 					status === 0 ? (
 						<div>
 							<div className='mb-5'>This extension is only available on ChatGPT.</div>
-							<a className='bg-emerald-500 rounded-md h-8 flex items-center font-normal px-2.5 text-white w-fit gap-2.5' href='https://chat-shared1.zhile.io/chat' target='_blank'>
+							<a className='bg-emerald-500 rounded-md h-8 flex items-center font-normal px-2.5 text-white w-fit gap-2.5' href='https://chat-shared2.zhile.io/chat' target='_blank'>
 								<span>Go to ChatGPT</span>
 								<TbExternalLink className='w-5 h-5' />
 							</a>
