@@ -15,7 +15,7 @@ const Home: FC = () => {
 	const [status, setStatus] = useState(-1)
 
 	useEffect(() => {
-		chrome.tabs.query({ active: true, url: ['https://chat-shared2.zhile.io/*'] }).then(([tab]) => {
+		chrome.tabs.query({ active: true, url: ['https://chat-shared2.zhile.io/*', 'https://chat-shared1.zhile.io/*'] }).then(([tab]) => {
 			setStatus(tab ? 1 : 0)
 		})
 	}, [])
